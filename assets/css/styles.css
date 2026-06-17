@@ -112,7 +112,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;margin:0;lett
 .section--pine{background:var(--pine);color:var(--paper)}
 .section--pine.deep{background:var(--pine-deep)}
 .pad{padding-block:clamp(4.5rem,9vw,8rem)}
-.section--gallery .pad{padding-bottom:0}
+.section--gallery .pad{padding-bottom:clamp(2rem,5vw,4rem)}
 
 /* editorial two-col */
 .edit{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(2rem,5vw,5rem);align-items:center}
