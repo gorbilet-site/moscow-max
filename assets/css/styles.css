@@ -137,10 +137,13 @@ h2.h-lg{font-size:clamp(2.1rem,4.6vw,3.7rem)}
 .scene__body>*+*{margin-top:1.4rem}
 
 /* gallery (mosaic) */
-.mosaic{column-count:3;column-gap:0;margin-top:clamp(2rem,4vw,3rem)}
-.mosaic figure{break-inside:avoid;margin:0;border-radius:0;overflow:hidden;
-  box-shadow:none}
-.mosaic img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.mosaic{
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(260px,24vw));
+  gap:0;margin-top:clamp(2rem,4vw,3rem);background:transparent
+}
+.mosaic figure{margin:0;border-radius:0;overflow:hidden;box-shadow:none}
+.mosaic figure:nth-child(3){grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .mosaic figure:hover img{transform:scale(1.04)}
 
 /* icecream cluster */
@@ -214,13 +217,14 @@ h2.h-lg{font-size:clamp(2.1rem,4.6vw,3.7rem)}
   .steps{grid-template-columns:1fr}
   .ideas{grid-template-columns:1fr;max-width:30rem;margin-inline:auto}
   .trio{grid-template-columns:1fr 1fr}
-  .mosaic{column-count:2}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,minmax(220px,34vw))}
+  .mosaic figure:nth-child(3){grid-row:span 1}
   .hdr__r{display:none}
 }
 @media(max-width:560px){
   body{font-size:16px}
   .trio{grid-template-columns:1fr}
-  .mosaic{column-count:1}
+  .mosaic{grid-template-columns:1fr;grid-template-rows:none}
   .cluster{grid-template-columns:1fr}
   .cluster .frame:first-child{margin-bottom:0}
   .foot__top{grid-template-columns:1fr;align-items:start}
