@@ -137,8 +137,8 @@ h2.h-lg{font-size:clamp(2.1rem,4.6vw,3.7rem)}
 .scene__body>*+*{margin-top:1.4rem}
 
 /* gallery (mosaic) */
-.mosaic{column-count:3;column-gap:0;margin-top:clamp(2rem,4vw,3rem);background:var(--paper)}
-.mosaic figure{break-inside:avoid;margin:0;border-radius:0;overflow:hidden;box-shadow:none;background:var(--paper)}
+.mosaic{column-count:3;column-gap:clamp(1rem,2vw,1.6rem);margin-top:clamp(2rem,4vw,3rem);background:var(--paper)}
+.mosaic figure{break-inside:avoid;margin:0 0 clamp(1rem,2vw,1.6rem);border-radius:0;overflow:hidden;box-shadow:none;background:var(--paper)}
 .mosaic img{width:100%;height:auto;transition:none}
 .mosaic figure:hover img{transform:none}
 
